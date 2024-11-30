@@ -26,10 +26,11 @@ body {
 }
 
 .header {
+    backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
     padding: 1rem 2rem;
     z-index: 1000;
 }
@@ -64,6 +65,7 @@ body {
 }
 
 .hero {
+    position: relative;
     height: 100vh;
     background-image: url('/assets/bg.png');
     background-size: cover;
@@ -100,6 +102,160 @@ body {
 .cta-button:hover {
     background-color: #5a03d7;
 }
+
+.ico {
+    margin: 0 auto;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    filter: url("#goo");
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.ico .circle {
+    background: var(--card-bg);
+    border-radius: 50%;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transform-origin: 0%;
+}
+
+.ico .circle.circle-top {
+    height: 26px;
+    width: 33px;
+    animation: blob-1-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    z-index: 0;
+    top: 0;
+}
+
+
+.ico .circle.circle-bottom {
+    height: 26px;
+    width: 33px;
+    animation: blob-2-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    z-index: 9;
+    bottom: 0px;
+}
+
+.ico .st-arrow {
+    fill: #aa9191;
+    animation: scrolly 3s cubic-bezier(0.77, 0, 0.175, 1) forwards infinite;
+    perspective: 9000px;
+    transform: translateZ(0);
+    transform-origin: bottom;
+}
+
+.ico .svg {
+    z-index: 9;
+    position: relative;
+}
+
+@keyframes blob-1-anim {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    14% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+
+    24% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes blob-2-anim {
+    0% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+
+    30% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+
+    70% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+
+    95% {
+        transform: scale(1) translate(-50%, 26px);
+    }
+
+    100% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+}
+
+@keyframes scrolly {
+    0% {
+        transform: translate3d(0, -150%, 0) rotateX(90deg) scale(0.5) skewX(3deg);
+    }
+
+    30% {
+        transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+    }
+
+    70% {
+        transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+    }
+
+    95% {
+        transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+    }
+
+    100% {
+        transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ico {
+        width: 60px;
+        height: 60px;
+        bottom: 2%;
+    }
+
+    .ico .circle {
+        height: 60px;
+        width: 60px;
+    }
+
+    .ico .circle.circle-top {
+        height: 20px;
+        width: 25px;
+    }
+
+    .ico .circle.circle-bottom {
+        height: 20px;
+        width: 25px;
+    }
+}
+
+@media (max-height: 600px) {
+
+    .hero {
+        padding-bottom: 150px;
+    }
+
+    .ico {
+        bottom: 10%;
+    }
+}
+
 
 .features {
     padding: 5rem 2rem;
