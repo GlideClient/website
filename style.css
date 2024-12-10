@@ -54,6 +54,11 @@ body {
     font-weight: 700;
 }
 
+.logo img {
+    height: 40px; /* Adjust height as needed */
+    width: auto;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -390,6 +395,7 @@ body {
     border-radius: 15px;
     width: 300px;
     text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .card img {

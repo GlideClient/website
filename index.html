@@ -19,12 +19,17 @@
     <meta name="google-site-verification" content="r28lqHeGOGV7C6jk6VrlYJkrt1-w8X4VbjLqQzyf6ME" />
     <title>Glide Client</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 </head>
 
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="logo">Glide Client</div>
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/logo.svg" alt="Glide Client Logo">
+                </a>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -112,8 +117,7 @@
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
-
-        // Close mobile menu when clicking a link
+        
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
