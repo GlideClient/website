@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
 
 :root {
-    --primary-color: #6603fc;
+    --primary-color: #8539ff;
     --secondary-color: #ffffff;
     --text-color: #ffffff9a;
     --bg-color: #1e1e2f;
@@ -430,16 +430,13 @@ body {
 }
 
 .card img {
+    color : "white";
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
     transition: transform 0.4s ease;
-}
-
-.card svg {
-    color : "white";
 }
 
 .card:hover img {
