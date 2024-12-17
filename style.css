@@ -437,10 +437,12 @@ body {
     position: relative;
     z-index: 1;
     transition: transform 0.4s ease;
+    filter: brightness(0) invert(1); /* Add this line to make SVGs white */
 }
 
 .card:hover img {
     transform: scale(1.05);
+    filter: brightness(0) invert(1); /* Add this line to keep SVGs white on hover */
 }
 
 .card h3 {
