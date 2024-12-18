@@ -79,7 +79,7 @@ body {
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('/assets/bg.png');
+    background-image: url('/assets/bg.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
