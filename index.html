@@ -24,6 +24,12 @@
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="/assets/logo.svg" alt="Glide Client Logo">
+        </div>
+    </div>
+
     <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -114,6 +120,11 @@
     </footer>
 
     <script>
+        window.addEventListener('load', () => {
+            const loaderWrapper = document.querySelector('.loader-wrapper');
+            loaderWrapper.classList.add('fade-out');
+        });
+
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         
