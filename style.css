@@ -92,8 +92,8 @@ body {
 
 
 .hero img {
-    filter: blur(2px);
-    backdrop-filter: blur(2px);
+    filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .hero h1 {
