@@ -564,6 +564,41 @@ body {
     z-index: 1;
 }
 
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(133, 57, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(133, 57, 255, 0.2);
+}
+
+.download-button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(133, 57, 255, 0.4);
+}
+
+.download-button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .about {
     padding: 3rem 2rem;
     text-align: center;
