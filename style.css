@@ -376,7 +376,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-color);
+    background: linear-gradient(135deg, var(--bg-color) 0%, #151522 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -388,40 +388,62 @@ body {
 
 .loader {
     position: relative;
-    width: 120px;
-    height: 120px;
-    border: none;
+    width: 160px;
+    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 800px;
 }
 
 .loader::before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 4px solid var(--card-bg);
-    border-top-color: var(--primary-color);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+    width: 120%;
+    height: 20px;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    bottom: -20px;
+    filter: blur(10px);
+    opacity: 0.3;
+    animation: shadow 2.5s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .loader img {
-    width: 60px;
-    height: 60px;
-    animation: pulse 2s ease-in-out infinite;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    animation: glide 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(133, 57, 255, 0.4));
 }
 
-@keyframes pulse {
-    0% { transform: scale(0.95); opacity: 0.8; }
-    50% { transform: scale(1.05); opacity: 1; }
-    100% { transform: scale(0.95); opacity: 0.8; }
+@keyframes glide {
+    0% {
+        transform: translateY(0) rotateY(0);
+    }
+    25% {
+        transform: translateY(-20px) rotateY(15deg);
+    }
+    50% {
+        transform: translateY(0) rotateY(0);
+    }
+    75% {
+        transform: translateY(-20px) rotateY(-15deg);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+    }
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes shadow {
+    0%, 100% {
+        transform: scaleX(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scaleX(0.7);
+        opacity: 0.15;
+    }
 }
 
 .loader-wrapper.fade-out {
