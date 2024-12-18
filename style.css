@@ -90,6 +90,12 @@ body {
     text-align: center;
 }
 
+
+.hero img {
+    filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
