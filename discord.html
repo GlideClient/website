@@ -16,17 +16,62 @@
     <meta name="author" content="Glide client Discord">
     <meta name="theme-color" content="#6603fc">
     <title>Glide Client - Discord</title>
-    <meta http-equiv="refresh" content="0; URL=https://discord.gg/42PXqKvwxq" />
-    <link rel="stylesheet" href="/old.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <style>
+        .redirect-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .dots {
+            display: inline-block;
+        }
+        
+        .dots::after {
+            content: '';
+            animation: dots 2s steps(4, end) infinite;
+        }
+        
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80% { content: '...'; }
+        }
+    </style>
 </head>
 <body>
-    <div class="background-container">
-        <h1>Glide Client</h1>
-        <p>Redirecting to Discord!</p>
-        <noscript>
-            If your browser doesn't support JavaScript, please 
-            <a href="https://discord.gg/42PXqKvwxq">click here</a> to continue.
-        </noscript>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="/assets/logo.svg" alt="Glide Client Logo">
+        </div>
     </div>
+
+    <main class="main">
+        <section class="hero">
+            <h1>Discord</h1>
+            <div class="redirect-text">
+                <p>Redirecting to Discord<span class="dots"></span></p>
+                <noscript>
+                    <p>If you are not redirected automatically, <a href="https://discord.gg/42PXqKvwxq" style="color: var(--primary-color)">click here</a></p>
+                </noscript>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loaderWrapper = document.querySelector('.loader-wrapper');
+            loaderWrapper.classList.add('fade-out');
+            
+            // Delay redirect to show the loading animation
+            setTimeout(() => {
+                window.location.href = 'https://discord.gg/42PXqKvwxq';
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
