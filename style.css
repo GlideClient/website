@@ -595,7 +595,18 @@ body {
 .download-button img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1);
+    /* Remove the filter causing the SVG to appear white */
+    /* filter: brightness(0) invert(1); */
+}
+
+.download-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--secondary-color); /* Set the icon color */
+}
+
+.download-button:hover svg {
+    stroke: var(--secondary-color);
 }
 
 @media (max-width: 768px) {
