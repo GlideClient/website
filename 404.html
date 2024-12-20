@@ -16,12 +16,75 @@
     <meta name="author" content="Glide client">
     <meta name="theme-color" content="#6603fc">
     <title>Glide Client - 404 Not Found</title>
-    <link rel="stylesheet" href="/old.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 </head>
 <body>
-    <div class="background-container">
-        <h1>Glide Client</h1>
-        <p>404 - Not Found</p>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="/assets/logo.svg" alt="Glide Client Logo">
+        </div>
     </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/logo.svg" alt="Glide Client Logo">
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/#features">Features</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/download.html">Download</a></li>
+                <li><a href="/discord">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1>Glide Client</h1>
+            <p>404 Not Found</p>
+            <div class="button-group">
+                <a href="/" class="cta-button">Return Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Website by Glide Client Team</p>
+            <p>GlideClient is not endorsed by <a href="https://github.com/Soar-Client/Legacy-SoarClient">Soar Client</a> nor <a href="https://github.com/EldoDebug">EldoDebug</a></p>
+            <p>Follow us: <a href="https://www.youtube.com/@glideclient" target="_blank">Youtube</a> | <a href="https://github.com/GlideClient/" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loaderWrapper = document.querySelector('.loader-wrapper');
+            loaderWrapper.classList.add('fade-out');
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
