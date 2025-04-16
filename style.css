@@ -31,9 +31,9 @@ body {
     width: 100%;
     top: 0;
     background: rgba(0, 0, 0, 0.6);
-    padding: 0.8rem 1rem; /* Reduced padding */
+    padding: 0.8rem 1rem;
     z-index: 1000;
-    height: 60px; /* Fixed height */
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Add max-width to prevent expanding */
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     height: 100%;
@@ -55,7 +55,7 @@ body {
 }
 
 .logo img {
-    height: 40px; /* Adjust height as needed */
+    height: 40px;
     width: auto;
 }
 
@@ -78,7 +78,9 @@ body {
 
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 60px; /* Add padding equal to navbar height */
+    box-sizing: border-box;
     background-image: url('/assets/bg.webp');
     background-size: cover;
     background-position: center;
@@ -88,12 +90,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-
-.hero img {
-    filter: blur(5px);
-    backdrop-filter: blur(5px);
 }
 
 .hero h1 {
@@ -154,7 +150,6 @@ body {
     z-index: 0;
     top: 0;
 }
-
 
 .ico .circle.circle-bottom {
     height: 26px;
@@ -244,7 +239,7 @@ body {
     .ico {
         width: 60px;
         height: 60px;
-        bottom: 10%; /* Changed from 2% to 10% to bring it closer to the text */
+        bottom: 10%;
     }
 
     .ico .circle {
@@ -266,11 +261,11 @@ body {
 @media (max-height: 600px) {
 
     .hero {
-        padding-bottom: 100px; /* Reduced from 150px to 100px */
+        padding-bottom: 100px;
     }
 
     .ico {
-        bottom: 15%; /* Changed from 10% to 15% */
+        bottom: 15%;
     }
 }
 
@@ -289,13 +284,13 @@ body {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 800px) { /* Increased from 768px to 800px to catch the transition earlier */
+@media (max-width: 800px) {
     .header {
-        padding: 0.8rem 1rem; /* Keep padding consistent */
+        padding: 0.8rem 1rem;
     }
     
     .logo {
-        font-size: 1.2rem; /* Slightly reduce logo size on mobile */
+        font-size: 1.2rem;
     }
     
     .hamburger {
@@ -321,8 +316,8 @@ body {
     .nav-links {
         position: fixed;
         top: 0;
-        background: rgba(41, 41, 56, 0.98); /* More transparent background */
-        backdrop-filter: blur(10px); /* Blur effect behind menu */
+        background: rgba(41, 41, 56, 0.98);
+        backdrop-filter: blur(10px);
         height: 100vh;
         width: 100%;
         flex-direction: column;
@@ -330,12 +325,12 @@ body {
         align-items: center;
         transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
         padding: 2rem;
-        transform: translateX(100%); /* Start off-screen to the right */
+        transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
     }
 
     .nav-links.active {
-        transform: translateX(0); /* Slide into view */
+        transform: translateX(0);
     }
 
     .nav-links li {
@@ -362,7 +357,6 @@ body {
         transition-delay: 0.3s;
     }
 
-    /* Force nav-links to be hidden at this breakpoint */
     .nav-links:not(.active) {
         display: none;
     }
@@ -543,12 +537,12 @@ body {
     position: relative;
     z-index: 1;
     transition: transform 0.4s ease;
-    filter: brightness(0) invert(1); /* Add this line to make SVGs white */
+    filter: brightness(0) invert(1);
 }
 
 .card:hover img {
     transform: scale(1.05);
-    filter: brightness(0) invert(1); /* Add this line to keep SVGs white on hover */
+    filter: brightness(0) invert(1);
 }
 
 .card h3 {
@@ -595,14 +589,12 @@ body {
 .download-button img {
     width: 20px;
     height: 20px;
-    /* Remove the filter causing the SVG to appear white */
-    /* filter: brightness(0) invert(1); */
 }
 
 .download-button svg {
     width: 20px;
     height: 20px;
-    stroke: var(--secondary-color); /* Set the icon color */
+    stroke: var(--secondary-color);
 }
 
 .download-button:hover svg {
@@ -640,4 +632,140 @@ body {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.download-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.download-card.half-width {
+    width: calc(50% - 1rem);
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.download-card.full-width {
+    width: 100%;
+}
+
+.download-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.download-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(102, 3, 252, 0.15);
+}
+
+@media (max-width: 650px) {
+    .download-card.half-width {
+        width: 100%;
+    }
+}
+
+.card-container h1 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.mc-logo {
+    width: 110px;
+    height: 110px;
+    margin: 0.5rem 0;
+}
+
+.download-card h1 {
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
+    font-size: 1.7rem;
+}
+
+.download-card p {
+    margin: 0.2rem 0;
+}
+
+.download-card h3 {
+    padding: 0.2rem 0;
+    margin: 0.3rem 0;
+}
+
+.download-card h3 p {
+    margin: 0.1rem 0;
+    font-size: 0.9rem;
+}
+
+.download-btn {
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 1.5rem;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.download-btn:hover {
+    background-color: #10101a;
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(133, 57, 255, 0.2);
+}
+
+.misc-download {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    margin: 0.5rem auto; /* Center horizontally */
+}
+
+.misc-download .misc-text {
+    text-align: left;
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+.misc-download .separator {
+    height: 22px;
+    width: 1px;
+    background-color: var(--text-color);
+    margin: 0 12px;
+    flex-shrink: 0; /* Prevent separator from shrinking */
+}
+
+/* Add fixed width for the download text to ensure balance */
+.misc-download span:last-child {
+    min-width: 80px;
+    text-align: right;
 }

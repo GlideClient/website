@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 </head>
+
 <body>
     <div class="loader-wrapper">
         <div class="loader">
@@ -49,10 +51,66 @@
 
     <main class="main">
         <section class="hero">
-            <h1>Downloads</h1>
-            <p>Glide Client is in public beta, expect things to be incomplete</p>
-            <div class="button-group">
-                <a href="https://github.com/GlideClient/client/releases/tag/7.2-BETA-1" class="cta-button">Go to the beta download</a>
+            <div class="card-container">
+                <div class="download-card half-width minecraft-format">
+                    <h1>Minecraft Format</h1>
+                    <div style="height: 24px;">
+                        <p>recommended</p>
+                    </div>
+                    <img src="/assets/mc1.png" alt="Minecraft Logo" class="mc-logo">
+                    <h3>
+                        <p>Minecraft</p>
+                        <p>SKLauncher</p>
+                        <p>LegacyLauncher</p>
+                        <p>And more...</p>
+                    </h3>
+                    <p style="font-size: 0.7em;">GlideClient does not endorse any of the above launchers nor are they
+                        affiliated with us in any way.</p>
+                    <button class="download-btn">Download</button>
+                </div>
+                <div class="download-card half-width multimc-format">
+                    <h1>MultiMC Format</h1>
+                    <div style="height: 24px;"></div>
+                    <img src="/assets/mc2.png" alt="Minecraft Logo" class="mc-logo">
+                    <h3>
+                        <p>Prism Launcher</p>
+                        <p>MultiMC</p>
+                        <p>PolyMC</p>
+                        <p>ManyMC</p>
+                    </h3>
+                    <p style="font-size: 0.7em;">GlideClient does not endorse any of the above launchers nor are they
+                        affiliated with us in any way.</p>
+                    <button class="download-btn">Download</button>
+                </div>
+                <div class="download-card full-width misc-downloads">
+                    <h1>Misc Downloads</h1>
+                    <p>Only download these if you know what you are doing</p>
+                    <button class="download-btn misc-download">
+                        <span class="misc-text">Glide Client 7.2 with Spotify Integration</span>
+                        <span class="separator"></span>
+                        <span>Download</span>
+                    </button>
+                    <button class="download-btn misc-download">
+                        <span class="misc-text">Soar Client 7.1.2 Archive</span>
+                        <span class="separator"></span>
+                        <span>Download</span>
+                    </button>
+                    <button class="download-btn misc-download">
+                        <span class="misc-text">Glide Client Brand Assets for content creators</span>
+                        <span class="separator"></span>
+                        <span>Download</span>
+                    </button>
+                    <button class="download-btn misc-download">
+                        <span class="misc-text">Source Code</span>
+                        <span class="separator"></span>
+                        <span>Download</span>
+                    </button>
+                    <button class="download-btn misc-download">
+                        <span class="misc-text">Legacy Glide Client versions</span>
+                        <span class="separator"></span>
+                        <span>Download</span>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
@@ -60,8 +118,10 @@
     <footer class="footer">
         <div class="footer-content">
             <p>Website by Glide Client Team</p>
-            <p>GlideClient is not endorsed by <a href="https://github.com/Soar-Client/Legacy-SoarClient">Soar Client</a> nor <a href="https://github.com/EldoDebug">EldoDebug</a></p>
-            <p>Follow us: <a href="https://www.youtube.com/@glideclient" target="_blank">Youtube</a> | <a href="https://github.com/GlideClient/" target="_blank">GitHub</a></p>
+            <p>GlideClient is not endorsed by <a href="https://github.com/Soar-Client/Legacy-SoarClient">Soar Client</a>
+                nor <a href="https://github.com/EldoDebug">EldoDebug</a></p>
+            <p>Follow us: <a href="https://www.youtube.com/@glideclient" target="_blank">Youtube</a> | <a
+                    href="https://github.com/GlideClient/" target="_blank">GitHub</a></p>
         </div>
     </footer>
 
@@ -69,16 +129,26 @@
         window.addEventListener('load', () => {
             const loaderWrapper = document.querySelector('.loader-wrapper');
             loaderWrapper.classList.add('fade-out');
+
+            // Add animation for download cards
+            const cards = document.querySelectorAll('.download-card');
+            setTimeout(() => {
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, 200 * index);
+                });
+            }, 500);
         });
 
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
-        
+
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
-        
+
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -87,4 +157,5 @@
         });
     </script>
 </body>
+
 </html>
