@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph meta tags: Facebook and Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Click here for your options">
+    <meta property="og:description" content="SoarClient 7 is now Discontinued so you must choose which option you would rather pick to continue using soar.">
+    <meta property="og:image" content="/assets/soareol.png">
+    <meta property="og:url" content="https://glideclient.github.io/soareol">
+
+    <!-- Twitter Card embed tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Click here for your options">
+    <meta name="twitter:description" content="SoarClient 7 is now Discontinued so you must choose which option you would rather pick to continue using soar.">
+    <meta name="twitter:image" content="/assets/soareol.png">
+
+    <!-- SEO meta tags -->
+    <meta name="description" content="SoarClient 7 is now Discontinued so users can choose two different ways to contunue using soar">
+    <meta name="keywords" content="minecraft, glide client, Soar client, soarclient fix download, soarclient download, end of life soar, soar discontinued">
+    <meta name="author" content="GlideClient">
+    <meta name="theme-color" content="#6603fc">
+
+    <title>Glide Client - SoarClient 7 End Of Life</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+</head>
+<body>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="/assets/logo.svg" alt="Glide Client Logo">
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/logo.svg" alt="Glide Client Logo">
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/#features">Features</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="/discord">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1>SoarClient 7 is now Discontinued</h1>
+            <p>SoarClient is changing its focus towards the next generation of SoarClient which means SoarClient 7 has been discontinued.</p>
+            <p>People are constantly asking the same questions over and over in the Soar Discord server such as "How do I download?", "Why is the SoarClient site down?", "is SoarClient dead?" and the simple answer to all of those is you need to use the Offline Soar versions like SoarClient Legacy or GlideClient while EldoDebug works on the version eight of SoarClient.</p>
+            <p>Everyone in the SoarClient and GlideClient Discord servers will be notified when they can get version 8 of SoarClient but we would also love if you subscribed to @eldodebug on YouTube!</p>
+            <br>
+            <h2>....But for now you have 2 Options to choose from to continue using SoarClient</h2>
+            <br>
+            <p>GlideClient is a fork of Soar by several of the staff members of SoarClient and it is still being maintained, support for it is still available too. GlideClient has all the features you like about soar and more!</p>
+            <div class="button-group">
+                <a href="https://glideclient.github.io/" class="cta-button">Get GlideClient</a>
+            </div>
+            <br>
+            <p>SoarClient Legacy/Offline is SoarClient as it was when v7 was abandoned so it is out of date and is not being maintained, you can still choose to use it but any bugs found will not be fixed</p>
+            <div class="button-group">
+                <a href="https://github.com/Soar-Client/Legacy-SoarClient/releases" class="cta-button">Get SoarClient Legacy (Not Recommended)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Website by Glide Client Team</p>
+            <p>GlideClient is not endorsed by <a href="https://github.com/Soar-Client/Legacy-SoarClient">Soar Client</a> nor <a href="https://github.com/EldoDebug">EldoDebug</a></p>
+            <p>Follow us: <a href="https://www.youtube.com/@glideclient" target="_blank">Youtube</a> | <a href="https://github.com/GlideClient/" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loaderWrapper = document.querySelector('.loader-wrapper');
+            loaderWrapper.classList.add('fade-out');
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
