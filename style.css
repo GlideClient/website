@@ -107,11 +107,30 @@ body {
     margin: 1rem 0;
 }
 
-.hero-content {
+.simplepagecontent {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 120px auto 0 auto; /* adjust 120px if you want more/less space below navbar */
     padding: 2rem 1rem;
-    width: 100%;
+    background: none;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.simplepagecontent .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .simplepagecontent {
+        padding: 1rem 0.2rem;
+    }
+    .simplepagecontent .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .cta-button {
