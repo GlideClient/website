@@ -107,6 +107,13 @@ body {
     margin: 1rem 0;
 }
 
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
 .cta-button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
