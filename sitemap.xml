@@ -5,22 +5,35 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
 <url>
-  <loc>https://glideclient.github.io/</loc>
-  <lastmod>2024-12-18T23:06:06+00:00</lastmod>
+  <loc>https://glideclient.com/</loc>
+  <lastmod>2025-06-07T09:53:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://glideclient.github.io/download.html</loc>
-  <lastmod>2024-12-18T23:06:06+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://glideclient.com/download/</loc>
+  <lastmod>2025-06-07T09:53:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://glideclient.github.io/discord.html</loc>
-  <lastmod>2024-12-18T23:06:06+00:00</lastmod>
+  <loc>https://glideclient.com/discord/</loc>
+  <lastmod>2025-06-07T09:53:35+00:00</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.50</priority>
 </url>
-
+<url>
+  <loc>https://glideclient.com/soareol</loc>
+  <lastmod>2025-06-07T09:53:40+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://glideclient.com/data/branding/</loc>
+  <lastmod>2025-06-07T09:53:45+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.70</priority>
+</url>
 
 </urlset>
