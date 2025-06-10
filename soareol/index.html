@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
     <style>
-        /* Additional styles specific to this page */        .option-cards {
+
+        .option-cards {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -147,11 +148,20 @@
             }
         }
 
-        @media (max-height: 700px) {
+        .hero {
+            min-height: 100vh;
+            padding: 8rem 2rem 2rem 2rem; 
+            height: auto; 
+        }
+
+        @media (max-width: 800px) {
             .hero {
-                min-height: calc(100vh + 300px);
+                padding: 6rem 2rem 2rem 2rem;
+                min-height: 100vh;
+                height: auto;
             }
         }
+
     </style>
 </head>
 
