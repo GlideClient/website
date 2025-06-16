@@ -641,3 +641,19 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+
+/* YouTube embed styling */
+.hero iframe {
+    width: 800px;
+    height: 450px;
+    max-width: 90vw;
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero iframe {
+        width: 90vw;
+        height: calc(90vw * 0.5625); /* Maintain 16:9 aspect ratio */
+    }
+}
