@@ -658,3 +658,147 @@ body {
         height: calc(90vw * 0.5625); /* Maintain 16:9 aspect ratio */
     }
 }
+
+.option-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;            margin-top: 2rem;
+    margin-bottom: 8rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    padding-top: 3.5rem; /* Add extra top padding for status tag */
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.option-card.recommended {
+    border: 2px solid var(--primary-color);
+}
+
+.option-card.not-recommended {
+    border: 2px solid #ff5252;
+}
+
+.status-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap; /* Prevent text wrapping */
+    z-index: 2; /* Ensure it's above other content */
+}
+
+.status-tag.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+  .status-tag.inactive {
+    background-color: #ff5252;
+    color: white;
+}
+
+.legacy-button {
+    background-color: #ff5252;
+    border: none;
+    color: white;
+}
+
+.legacy-button:hover {
+    background-color: #e03c3c;
+}
+.hero {
+    min-height: calc(100vh + 150px);
+    padding: 12rem 2rem 8rem 2rem;
+    text-align: center;
+    background-image: url('/assets/bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1, .hero h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.option-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.option-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}        @media (max-width: 800px) {
+    .option-cards {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 6rem;
+    }
+    
+    .option-card {
+        width: 100%;
+        padding: 2rem 1.5rem; /* Reduce horizontal padding on mobile */
+    }
+    
+    .status-tag {
+        position: static; /* Change to static positioning on mobile */
+        display: inline-block;
+        margin-bottom: 1rem; /* Add margin below tag */
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding-top: 8rem;
+        min-height: calc(100vh + 200px);
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 8rem 2rem 2rem 2rem; 
+    height: auto; 
+}
+
+@media (max-width: 800px) {
+    .hero {
+        padding: 6rem 2rem 2rem 2rem;
+        min-height: 100vh;
+        height: auto;
+    }
+}
