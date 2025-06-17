@@ -478,6 +478,8 @@ body {
 
 .card {
     background-color: var(--card-bg);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px; /* Increased from 10px to 20px */
     padding: 1.5rem;
     border-radius: 15px;
     width: 300px;
@@ -585,11 +587,28 @@ body {
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--primary-color);
     box-shadow: 0 4px 15px rgba(133, 57, 255, 0.2);
+    animation: pulsate 2s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 4px 15px rgba(133, 57, 255, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(133, 57, 255, 0.4);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(133, 57, 255, 0.2);
+        transform: scale(1);
+    }
 }
 
 .download-button:hover {
     background-color: var(--primary-color);
     box-shadow: 0 4px 20px rgba(133, 57, 255, 0.4);
+    animation: none; /* Pause pulsing on hover */
 }
 
 .download-button img {
@@ -672,6 +691,8 @@ body {
 
 .option-card {
     background-color: var(--card-bg);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 25px 25px; /* Increased from 20px to 25px */
     padding: 2rem;
     padding-top: 3.5rem; /* Add extra top padding for status tag */
     border-radius: 15px;
@@ -770,6 +791,8 @@ body {
     .option-card {
         width: 100%;
         padding: 2rem 1.5rem; /* Reduce horizontal padding on mobile */
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px); /* Ensure dot matrix is also on mobile */
+        background-size: 15px 15px; /* Increased from 8px to 15px */
     }
     
     .status-tag {
