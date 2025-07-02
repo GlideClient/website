@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Glide Client - Spotify Integration Guide">
+    <meta property="og:description" content="Learn how to set up Spotify integration with Glide Client">
+    <meta property="og:image" content="/assets/embed.png">
+    <meta property="og:url" content="https://glideclient.com/spotifyguide">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Glide Client - Spotify Integration Guide">
+    <meta name="twitter:description" content="Learn how to set up Spotify integration with Glide Client">
+    <meta name="twitter:image" content="/assets/embed.png">
+    <meta name="description" content="Comprehensive guide to setting up Spotify integration with Glide Client">
+    <meta name="keywords" content="minecraft, glide client, spotify integration, spotify api">
+    <meta name="author" content="Glide client">
+    <meta name="theme-color" content="#6603fc">
+    <title>Glide Client - Spotify Integration Guide</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <style>
+        .guide-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .guide-section {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guide-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .guide-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .step {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .step-number {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .step-content {
+            margin-left: 40px;
+        }
+        
+        .image-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .note {
+            background-color: rgba(133, 57, 255, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .code-block {
+            background-color: #2a2a3a;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        
+        .button-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            margin: 1rem 0;
+        }
+        
+        .button-link:hover {
+            background-color: #5a03d7;
+        }
+        
+        .troubleshooting ul {
+            padding-left: 20px;
+        }
+        
+        .troubleshooting li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="/assets/logo.svg" alt="Glide Client Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="/discord">Discord</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <section class="hero">
+            <h1>Spotify Integration Guide</h1>
+            <p>This guide will walk you through the process of setting up Spotify integration with Glide Client, allowing you to control your music directly from the game.</p>
+        </section>
+        
+        <div class="guide-container">
+            <section class="guide-section">
+
+            <section class="guide-section">
+                <h2>Prerequisites</h2>
+                <ul>
+                    <li>A Spotify account</li>
+                    <li>Latest version of Glide Client (Spotify branch) installed</li>
+                    <li>Internet connection</li>
+                </ul>
+            </section>
+
+            <section class="guide-section">
+                <h2>Step-by-Step Setup Guide</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create a Spotify Developer Account</h3>
+                    <div class="step-content">
+                        <p>Visit the <a href="https://developer.spotify.com/" target="_blank" style="color: var(--primary-color);">Spotify Developer Portal</a> and sign in with your Spotify account credentials.</p>
+                        <p>If this is your first time using the Spotify Developer Portal, you'll need to agree to the terms and conditions.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Create a New Application</h3>
+                    <div class="step-content">
+                        <p>Once logged in:</p>
+                        <ol>
+                            <li>Click on the "Dashboard" link in the top menu</li>
+                            <li>Select "Create an App"</li>
+                            <li>Enter a name for your application (e.g., "Glide Client")</li>
+                            <li>Add a brief description (e.g., "Spotify integration for Glide Client")</li>
+                            <li>Check the agreement box and click "Create"</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Configure Your Application</h3>
+                    <div class="step-content">
+                        <p>After creating your app, you'll need to configure it:</p>
+                        <ol>
+                            <li>In your app's dashboard, click on "Edit Settings"</li>
+                            <li>Under "Redirect URIs", add: <code>http://localhost:8888/callback</code></li>
+                            <li>Save the changes</li>
+                        </ol>
+                        <div class="note">
+                            <p><strong>Note:</strong> The redirect URI must match exactly what's configured in Glide Client. If you're experiencing connection issues, double-check that this URI is entered correctly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Your API Credentials</h3>
+                    <div class="step-content">
+                        <p>On your app's dashboard, you'll find two important pieces of information:</p>
+                        <ol>
+                            <li><strong>Client ID</strong> - Visible on the main app page</li>
+                            <li><strong>Client Secret</strong> - Click "Show Client Secret" to reveal</li>
+                        </ol>
+                        <div class="note">
+                            <p><strong>Important:</strong> Keep your Client Secret secure! Never share it publicly or commit it to public repositories.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Configure Glide Client</h3>
+                    <div class="step-content">
+                        <p>Now, open Glide Client and follow these steps:</p>
+                        <ol>
+                            <li>Open the Glide Client settings menu</li>
+                            <li>Navigate to the "Integrations" tab</li>
+                            <li>Find the "Spotify" section</li>
+                            <li>Enter your Client ID in the designated field</li>
+                            <li>Enter your Client Secret in the designated field</li>
+                            <li>Click "Save" or "Next"</li>
+                            <li>Click "Connect with Spotify"</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Authorize the Connection</h3>
+                    <div class="step-content">
+                        <p>A browser window will open asking you to authorize Glide Client to access your Spotify account:</p>
+                        <ol>
+                            <li>Log in to your Spotify account if prompted</li>
+                            <li>Review the permissions that Glide Client is requesting</li>
+                            <li>Click "Agree" or "Authorize"</li>
+                        </ol>
+                        <p>After authorization, you'll be redirected back to Glide Client, and the connection will be established.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <h3>Testing the Connection</h3>
+                    <div class="step-content">
+                        <p>To ensure that everything is working properly:</p>
+                        <ol>
+                            <li>Open Spotify and start playing a song</li>
+                            <li>In Glide Client, press the configured hotkey (default: F8) to open the Spotify controller</li>
+                            <li>You should see the current song information and be able to control playback</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guide-section troubleshooting">
+                <h2>Troubleshooting</h2>
+                
+                <h3>Common Issues</h3>
+                <ul>
+                    <li><strong>Connection Failed:</strong> Verify that your Client ID and Client Secret are entered correctly.</li>
+                    <li><strong>Authorization Error:</strong> Make sure you've added the correct redirect URI in your Spotify app settings.</li>
+                    <li><strong>Playback Controls Not Working:</strong> Spotify Premium is required for full playback control via the API.</li>
+                    <li><strong>Token Expired:</strong> If you encounter authentication errors after some time, try reconnecting through the Glide Client settings.</li>
+                </ul>
+                
+                <h3>Still Having Issues?</h3>
+                <p>Join our Discord community for help from the developers and other users:</p>
+                <a href="/discord" class="button-link">Join Discord</a>
+            </section>
+
+            <section class="guide-section">
+                <h2>Advanced Features</h2>
+                
+                <h3>Custom Keybindings</h3>
+                <p>You can customize the hotkeys for controlling Spotify in the Glide Client settings menu under "Controls" → "Keybindings".</p>
+                
+                <h3>HUD Customization</h3>
+                <p>Adjust the appearance and position of the Spotify information display in the "Integrations" → "Spotify" → "HUD Settings" menu.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Glide Client. All rights reserved.</p>
+        <p>
+            <a href="/">Home</a> |
+            <a href="/download">Download</a> |
+            <a href="/discord">Discord</a>
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const navItems = document.querySelectorAll('.nav-links li a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
