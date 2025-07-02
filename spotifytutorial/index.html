@@ -193,7 +193,7 @@
                         <p>After creating your app, you'll need to configure it:</p>
                         <ol>
                             <li>In your app's dashboard, click on "Edit Settings"</li>
-                            <li>Under "Redirect URIs", add: <code>http://localhost:8888/callback</code></li>
+                            <li>Under "Redirect URIs", add: <code>http://127.0.0.1:8888/callback</code></li>
                             <li>Save the changes</li>
                         </ol>
                         <div class="note">
@@ -223,9 +223,8 @@
                     <div class="step-content">
                         <p>Now, open Glide Client and follow these steps:</p>
                         <ol>
-                            <li>Open the Glide Client settings menu</li>
-                            <li>Navigate to the "Integrations" tab</li>
-                            <li>Find the "Spotify" section</li>
+                            <li>Open the Glide Client menu</li>
+                            <li>Find the "Music" section</li>
                             <li>Enter your Client ID in the designated field</li>
                             <li>Enter your Client Secret in the designated field</li>
                             <li>Click "Save" or "Next"</li>
@@ -255,8 +254,6 @@
                         <p>To ensure that everything is working properly:</p>
                         <ol>
                             <li>Open Spotify and start playing a song</li>
-                            <li>In Glide Client, press the configured hotkey (default: F8) to open the Spotify controller</li>
-                            <li>You should see the current song information and be able to control playback</li>
                         </ol>
                     </div>
                 </div>
@@ -269,23 +266,11 @@
                 <ul>
                     <li><strong>Connection Failed:</strong> Verify that your Client ID and Client Secret are entered correctly.</li>
                     <li><strong>Authorization Error:</strong> Make sure you've added the correct redirect URI in your Spotify app settings.</li>
-                    <li><strong>Playback Controls Not Working:</strong> Spotify Premium is required for full playback control via the API.</li>
-                    <li><strong>Token Expired:</strong> If you encounter authentication errors after some time, try reconnecting through the Glide Client settings.</li>
                 </ul>
                 
                 <h3>Still Having Issues?</h3>
                 <p>Join our Discord community for help from the developers and other users:</p>
                 <a href="/discord" class="button-link">Join Discord</a>
-            </section>
-
-            <section class="guide-section">
-                <h2>Advanced Features</h2>
-                
-                <h3>Custom Keybindings</h3>
-                <p>You can customize the hotkeys for controlling Spotify in the Glide Client settings menu under "Controls" → "Keybindings".</p>
-                
-                <h3>HUD Customization</h3>
-                <p>Adjust the appearance and position of the Spotify information display in the "Integrations" → "Spotify" → "HUD Settings" menu.</p>
             </section>
         </div>
     </main>
