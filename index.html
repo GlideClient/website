@@ -34,9 +34,7 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="/">
-                    <img src="/assets/logo.svg" alt="GlideClient Logo">
-                </a>
+                <img src="/assets/logo.svg" alt="GlideClient Logo">
             </div>
             <div class="hamburger">
                 <span></span>
@@ -151,6 +149,18 @@
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        const logo = document.querySelector('.header .logo');
+        let clickCount = 0;
+
+        logo.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 5) {
+                const audio = new Audio('/assets/helico.mp3');
+                audio.play();
+                clickCount = 0;
+            }
         });
     </script>
 
