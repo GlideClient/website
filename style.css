@@ -831,7 +831,9 @@ body {
 }
 
 .download-card {
-    background-color: var(--card-bg);
+    background-color: rgba(41, 41, 56, 0.6); /* Reduced opacity from solid to 0.6 */
+    backdrop-filter: blur(10px); /* Add blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     padding: 1rem;
     border-radius: 15px;
     text-align: center;
