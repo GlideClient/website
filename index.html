@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Glide Client">
-    <meta property="og:description" content="The website for Glide Client">
+    <meta property="og:title" content="GlideClient">
+    <meta property="og:description" content="The website for GlideClient">
     <meta property="og:image" content="/assets/embed.png">
-    <meta property="og:url" content="https://glideclient.github.io">
-    <meta name='twitter:site' content='glideclient.github.io' />
+    <meta property="og:url" content="https://glideclient.com">
+    <meta name='twitter:site' content='glideclient.com' />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Glide Client">
-    <meta name="twitter:description" content="The website for Glide Client">
+    <meta name="twitter:title" content="GlideClient">
+    <meta name="twitter:description" content="The website for GlideClient">
     <meta name="twitter:image" content="/assets/embed.png">
-    <meta name="description" content="The website for Glide Client">
+    <meta name="description" content="The website for GlideClient">
     <meta name="keywords" content="minecraft, glide client, soar client, SoarClient, GlideClient, 1.8.9, modern website">
-    <meta name="author" content="Glide Client Team">
+    <meta name="author" content="GlideClient Team">
     <meta name="theme-color" content="#6603fc">
+    <link rel="canonical" href="https://glideclient.com" />
     <meta name="google-site-verification" content="r28lqHeGOGV7C6jk6VrlYJkrt1-w8X4VbjLqQzyf6ME" />
-    <title>Glide Client</title>
+    <title>GlideClient</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 </head>
@@ -26,16 +27,14 @@
 <body>
     <div class="loader-wrapper">
         <div class="loader">
-            <img src="/assets/logo.svg" alt="Glide Client Logo">
+            <img src="/assets/logo.svg" alt="GlideClient Logo">
         </div>
     </div>
 
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="/">
-                    <img src="/assets/logo.svg" alt="Glide Client Logo">
-                </a>
+                <img src="/assets/logo.svg" alt="GlideClient Logo">
             </div>
             <div class="hamburger">
                 <span></span>
@@ -99,17 +98,17 @@
                 <div class="card">
                     <img src="/assets/desktop.svg" alt="Computer image">
                     <h3>Cross platform</h3>
-                    <p>We support Linux, Windows and macOs and we will work hard to continue that fact!</p>
+                    <p>We support Linux, Windows and macOS and we will work hard to continue that fact!</p>
                 </div>
                 <div class="card">
                     <img src="/assets/increase.svg" alt="chart with increase image">
                     <h3>Quality of Life</h3>
-                    <p>Glide Client offers numerous quality of life enhancements and bug fixes compared to Soar Client. We are commited to continue adding more as time passes!</p>
+                    <p>GlideClient offers numerous quality of life enhancements and bug fixes compared to Soar Client. We are commited to continue adding more as time passes!</p>
                 </div>
                 <div class="card">
                     <img src="/assets/branch.svg" alt="A github branch">
                     <h3>FOSS</h3>
-                    <p>At Glide Client, we're committed to openness and collaboration. Whether you make a pull request, report an issue, or fork our code, we will welcome it all!</p>
+                    <p>At GlideClient, we're committed to openness and collaboration. Whether you make a pull request, report an issue, or fork our code, we will welcome it all!</p>
                 </div>
             </div>
         </section>
@@ -119,14 +118,12 @@
             <p>GlideClient is a fork of Soar that aims to fix many of the issues people faced with Soar Client.</p>
             <p>We want to be one of the most unique 1.8.9 minecraft pvp clients through having a unique user experiences that you cant find elsewhere.</p>
             <p>GlideClient was started by two of the Mods at Soar Client though it was originally planned as a Soar Client update we decided to seperate it after soar went open-source so we could add features that would have not fit the soar client look.</p>
-            <p>We dont want to be competiton with Soar Client as we fully support EldoDebug, therefore when Soar Client 8 releases we will discontinue glide</p>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-content">
             <p>Website by GlideClient Team</p>
-            <p>GlideClient is not endorsed by <a href="https://github.com/Soar-Client/Legacy-SoarClient">Soar Client</a> nor <a href="https://github.com/EldoDebug">EldoDebug</a></p>
             <p>Follow us: <a href="https://www.youtube.com/@glideclient" target="_blank">Youtube</a> | <a href="https://github.com/GlideClient/" target="_blank">GitHub</a> | <a href="/discord" target="_blank">Discord</a></p>
             <p>Need our brand assets? <a href="https://glideclient.github.io/data/branding/" target="_blank">Click here!</a></p>
         </div>
@@ -152,6 +149,18 @@
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        const logo = document.querySelector('.header .logo');
+        let clickCount = 0;
+
+        logo.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 5) {
+                const audio = new Audio('/assets/helico.mp3');
+                audio.play();
+                clickCount = 0;
+            }
         });
     </script>
 
