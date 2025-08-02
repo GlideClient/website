@@ -949,6 +949,8 @@ body {
   position: relative;
 }
 
+/*
+Glow breaks safari!
 .gallery::before {
   content: '';
   position: absolute;
@@ -962,7 +964,7 @@ body {
   filter: blur(10px);
   z-index: -1;
   transform: translate3d(0px, 0px, 0px) /* Maybe this will fix performance issues in safari, who tf knows safari is special! */
-}
+} */
 
 @property --gradient-angle {
   syntax: '<angle>';
