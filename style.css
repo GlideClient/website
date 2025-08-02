@@ -667,7 +667,7 @@ body {
 @media (max-width: 800px) {
     .about {
         padding: 2rem 1.5rem;
-        margin: 1rem 1rem 2rem 1rem; /* Adjusted to include bottom margin */
+        margin: 1rem 1rem 2rem 1rem; 
     }
 
         .about p {
