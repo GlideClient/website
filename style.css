@@ -959,8 +959,7 @@ body {
   background: linear-gradient(var(--gradient-angle, 0deg), rgb(0, 106, 122) 0%, rgb(116, 22, 178) 100%);
   animation: rotateGradient 4s linear infinite;
   border-radius: 20px;
-  filter: blur(15px);
-  -webkit-filter: blur(15px);
+  filter: blur(10px);
   z-index: -1;
 }
 
