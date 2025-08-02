@@ -645,8 +645,6 @@ body {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(135deg, rgba(96, 40, 226, 0.463) 0%, rgba(174, 0, 255, 0.416) 100%);
-    border-radius: 20px;
 }
 
 .about h2 {
