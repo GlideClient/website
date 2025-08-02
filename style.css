@@ -2,10 +2,13 @@
 
 :root {
     --primary-color: #8539ff;
+    --primary-second-color: #6a0dff;
     --secondary-color: #ffffff;
     --text-color: #ffffff9a;
     --bg-color: #1e1e2f;
     --card-bg: #292938;
+    --primary-link-color: #0492ff;
+    --secondary-link-color: #0077b3;
 }
 
 * {
@@ -628,14 +631,41 @@ body {
 }
 
 .about {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 3rem 2rem; 
+    margin-bottom: 3rem; 
     text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about h2 {
     color: var(--secondary-color);
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem; 
+}
+
+.about p {
+    margin-bottom: 2rem; 
+    line-height: 1.7; 
+    font-size: 1.1rem; 
+}
+
+.about p:last-child {
+    margin-bottom: 0; 
+}
+
+
+@media (max-width: 800px) {
+    .about {
+        padding: 2rem 1.5rem;
+        margin: 1rem 1rem 2rem 1rem; 
+    }
+
+        .about p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .footer {
@@ -818,6 +848,157 @@ body {
     }
 }
 
+/* nice link style */
+.minimal-link {
+    color: var(--primary-link-color);
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.minimal-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(45deg, --primary-link-color, --secondary-link-color);
+    transition: width 0.3s ease;
+}
+
+.minimal-link:hover::after {
+    width: 100%;
+}
+
+.minimal-link:hover {
+    color: var(--secondary-link-color);
+    transform: translateX(5px);
+}
+
+/* galary */
+.gallery {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(200deg, rgb(0, 38, 66) 0%, rgb(120, 19, 142) 100%);
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+}
+
+.gallery h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gallery > p {
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 16/10;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(133, 57, 255, 0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.grid-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.891));
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover .grid-overlay {
+    transform: translateY(0);
+}
+
+.grid-overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.grid-overlay p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .grid-item {
+        aspect-ratio: 16/9;
+    }
+    
+    .gallery {
+        padding: 3rem 1.5rem;
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .grid-overlay {
+        position: static;
+        transform: none;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 1rem;
+    }
+}
+
+.grid-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.grid-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 .card-container {
     display: flex;
     justify-content: center;
