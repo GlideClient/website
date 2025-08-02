@@ -892,11 +892,27 @@ body {
 .gallery {
     padding: 3rem 2rem;
     text-align: center;
-    background: linear-gradient(200deg, rgb(0, 38, 66) 0%, rgb(120, 19, 142) 100%);
+    background: linear-gradient(var(--gradient-angle, 0deg), rgb(0, 38, 66) 0%, rgb(120, 19, 142) 100%);
+    animation: rotateGradient 4s linear infinite;
     max-width: 1000px;
     margin: 0 auto;
     border-radius: 20px;
     margin-bottom: 3rem;
+}
+
+@property --gradient-angle {
+    syntax: '<angle>';
+    initial-value: 200deg;
+    inherits: false;
+}
+
+@keyframes rotateGradient {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg; 
+    }
 }
 
 .gallery h2 {
