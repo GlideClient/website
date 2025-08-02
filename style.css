@@ -945,6 +945,9 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   position: relative;
 }
@@ -952,15 +955,15 @@ body {
 .gallery::before {
   content: '';
   position: absolute;
-  top: -30;
-  left: -30;
-  right: -30;
-  bottom: -30;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   background: linear-gradient(var(--gradient-angle, 0deg), rgb(0, 106, 122) 0%, rgb(116, 22, 178) 100%);
   animation: rotateGradient 4s linear infinite;
   border-radius: 20px;
-  filter: blur(30px);
-  -webkit-filter: blur(30px); /* I love safari but for fuck sake why does it have to be special */
+  filter: blur(25px);
+  -webkit-filter: blur(25px);
   z-index: -1;
 }
 
