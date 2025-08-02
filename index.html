@@ -4,24 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="GlideClient">
-    <meta property="og:description" content="The website for GlideClient">
-    <meta property="og:image" content="/assets/embed.png">
-    <meta property="og:url" content="https://glideclient.com">
-    <meta name='twitter:site' content='glideclient.com' />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GlideClient">
-    <meta name="twitter:description" content="The website for GlideClient">
-    <meta name="twitter:image" content="/assets/embed.png">
-    <meta name="description" content="The website for GlideClient">
-    <meta name="keywords" content="minecraft, glide client, soar client, SoarClient, GlideClient, 1.8.9, modern website">
-    <meta name="author" content="GlideClient Team">
-    <meta name="theme-color" content="#6603fc">
-    <link rel="canonical" href="https://glideclient.com" />
-    <meta name="google-site-verification" content="r28lqHeGOGV7C6jk6VrlYJkrt1-w8X4VbjLqQzyf6ME" />
+    
+    <!-- Primary Meta Tags -->
     <title>GlideClient</title>
+    <meta name="description" content="Download GlideClient, the ultimate open-source Minecraft 1.8.9 PvP client. Cross-platform support for Windows, macOS, and Linux with quality of life improvements and bug fixes.">
+    <meta name="keywords" content="minecraft client, pvp client, 1.8.9 client, minecraft mod, soar client alternative, cross platform minecraft, open source minecraft client, minecraft pvp, glideclient download, minecraft enhancement">
+    <meta name="author" content="GlideClient">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GlideClient - Modern 1.8.9 Minecraft Client">
+    <meta property="og:description" content="The most beautiful open-source Minecraft 1.8.9 PvP client with cross-platform support and quality of life improvements. Download now for Windows, macOS, and Linux.">
+    <meta property="og:image" content="https://glideclient.com/assets/embed.png">
+    <meta property="og:image:alt" content="GlideClient Logo - Minecraft PvP Client">
+    <meta property="og:url" content="https://glideclient.com">
+    <meta property="og:site_name" content="GlideClient">
+    <meta property="og:locale" content="en_GB">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@glideclient">
+    <meta name="twitter:creator" content="glideclient">
+    <meta name="twitter:title" content="GlideClient - Modern Minecraft 1.8.9 PvP Client">
+    <meta name="twitter:description" content="The ultimate open-source Minecraft 1.8.9 PvP client with cross-platform support and quality of life improvements.">
+    <meta name="twitter:image" content="https://glideclient.com/assets/embed.png">
+    <meta name="twitter:image:alt" content="GlideClient Logo - Minecraft PvP Client">
+    
+    <!-- Theme and Brand Colors -->
+    <meta name="theme-color" content="#6603fc">
+    <meta name="msapplication-TileColor" content="#6603fc">
+    <meta name="msapplication-navbutton-color" content="#6603fc">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://glideclient.com" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Verification -->
+    <meta name="google-site-verification" content="r28lqHeGOGV7C6jk6VrlYJkrt1-w8X4VbjLqQzyf6ME" />
+    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "GlideClient",
+        "description": "An enhanced open-source Minecraft 1.8.9 PvP client with cross-platform support for Windows, macOS, and Linux. Features quality of life improvements and bug fixes over Soar Client.",
+        "url": "https://glideclient.com",
+        "downloadUrl": "https://glideclient.com/download",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": ["Windows", "macOS", "Linux"],
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "GBP"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "GlideClient",
+            "url": "https://glideclient.com"
+        },
+        "sameAs": [
+            "https://github.com/GlideClient/",
+            "https://www.youtube.com/@glideclient",
+            "https://glideclient.github.io"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -50,7 +108,7 @@
         </nav>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content" role="main">
         <section class="hero">
             <h1>GlideClient</h1>
             <p>An updated version of Soar Client</p>
@@ -92,8 +150,8 @@
             </div>
         </section>
 
-        <section id="features" class="features">
-            <h2>Features</h2>
+        <section id="features" class="features" role="region" aria-labelledby="features-heading">
+            <h2>Why choose Glide?</h2>
             <div class="feature-cards">
                 <div class="card">
                     <img src="/assets/desktop.svg" alt="Computer image">
@@ -113,11 +171,11 @@
             </div>
         </section>
 
-        <section id="about" class="about">
-            <h2>What is GlideClient?</h2>
-            <p>GlideClient is a fork of Soar that aims to fix many of the issues people faced with Soar Client.</p>
-            <p>We want to be one of the most unique 1.8.9 minecraft pvp clients through having a unique user experiences that you cant find elsewhere.</p>
-            <p>GlideClient was started by two of the Mods at Soar Client though it was originally planned as a Soar Client update we decided to seperate it after soar went open-source so we could add features that would have not fit the soar client look.</p>
+        <section id="about" class="about" role="region" aria-labelledby="about-heading">
+            <h2 id="about-heading">What is GlideClient?</h2>
+            <p>GlideClient is an enhanced fork of SoarClient that addresses many issues users experienced with SoarClient 7. Our goal is to create one of the most unique Minecraft 1.8.9 clients available, offering distinctive user experiences you won't find elsewhere.</p>
+            <p>Originally started by two SoarClient moderators, GlideClient began as a planned update for SoarClient. When Soar became open-source, we decided to create a separate project to implement features that wouldn't fit the original SoarClient aesthetic and vision.</p>
+            <p>Join our growing community of Minecraf 1.8.9 PvP enthusiasts and experience the difference with GlideClient's enhanced design, fixes, and unique features.</p>
         </section>
     </main>
 
