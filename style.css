@@ -831,9 +831,9 @@ body {
 }
 
 .download-card {
-    background-color: rgba(41, 41, 56, 0.6); /* Reduced opacity from solid to 0.6 */
+    background-color: rgba(41, 41, 56, 0.35); /* Reduced opacity from solid to 0.6 */
     backdrop-filter: blur(10px); /* Add blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    -webkit-backdrop-filter: blur(10px);
     padding: 1rem;
     border-radius: 15px;
     text-align: center;
@@ -904,7 +904,9 @@ body {
 }
 
 .download-btn {
-    background-color: var(--bg-color);
+    background-color: rgba(41, 41, 56, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: var(--secondary-color);
     border: none;
     border-radius: 12px;
