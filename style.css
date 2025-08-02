@@ -952,16 +952,16 @@ body {
 .gallery::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: -30;
+  left: -30;
+  right: -30;
+  bottom: -30;
   background: linear-gradient(var(--gradient-angle, 0deg), rgb(0, 106, 122) 0%, rgb(116, 22, 178) 100%);
   animation: rotateGradient 4s linear infinite;
   border-radius: 20px;
   filter: blur(30px);
+  -webkit-filter: blur(30px); /* I love safari but for fuck sake why does it have to be special */
   z-index: -1;
-  transform: scale(1);
 }
 
 @property --gradient-angle {
