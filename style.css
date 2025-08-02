@@ -952,10 +952,10 @@ body {
 .gallery::before {
   content: '';
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(var(--gradient-angle, 0deg), rgb(0, 106, 122) 0%, rgb(116, 22, 178) 100%);
   animation: rotateGradient 4s linear infinite;
   border-radius: 20px;
