@@ -7,15 +7,30 @@
 
 <url>
   <loc>https://glideclient.com/</loc>
-  <lastmod>2025-06-07T09:53:35+00:00</lastmod>
+  <lastmod>2025-08-03T12:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
+  <image:image>
+  <image:loc>https://glideclient.com/assets/logo.png</image:loc>
+  <image:title>GlideClient Logo</image:title>
+  <image:caption>GlideClient - Enhanced Minecraft 1.8.9 PvP Client</image:caption>
+  </image:image>
+  <image:image>
+  <image:loc>https://glideclient.com/assets/screenshots/menu.webp</image:loc>
+  <image:title>GlideClient Menu</image:title>
+  <image:caption>Modern interface of GlideClient showing the home screen</image:caption>
+  </image:image>
+  <image:image>
+  <image:loc>https://glideclient.com/assets/screenshots/huds.webp</image:loc>
+  <image:title>GlideClient HUD Theme: Modern</image:title>
+  <image:caption>Custom HUD themes available in GlideClient</image:caption>
+  </image:image>
 </url>
 <url>
   <loc>https://glideclient.com/download/</loc>
-  <lastmod>2025-06-07T09:53:36+00:00</lastmod>
+  <lastmod>2025-08-03T12:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://glideclient.com/discord/</loc>
