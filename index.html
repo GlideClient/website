@@ -15,6 +15,7 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
+    <meta name="revised" content="2025-08-03">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -56,34 +57,133 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 
-    <!-- JSON-LD Structured Data -->
+
+    <!-- FIXED JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "GlideClient",
-        "description": "An enhanced open-source Minecraft 1.8.9 PvP client with cross-platform support for Windows, macOS, and Linux. Features quality of life improvements and bug fixes over Soar Client.",
-        "url": "https://glideclient.com",
-        "downloadUrl": "https://glideclient.com/download",
-        "applicationCategory": [ "GameApplication", "EntertainmentApplication" ],
-        "operatingSystem": ["Windows", "macOS", "Linux"],
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "GBP"
-        },
-        "creator": {
+        "@graph": [
+            {
+            "@type": "SoftwareApplication",
+            "name": "GlideClient",
+            "description": "An enhanced open-source Minecraft 1.8.9 PvP client with cross-platform support. Features quality of life improvements and bug fixes over Soar Client.",
+            "url": "https://glideclient.com",
+            "downloadUrl": "https://glideclient.com/download",
+            "applicationCategory": ["GameApplication", "EntertainmentApplication"],
+            "operatingSystem": ["Windows", "macOS", "Linux"],
+            "softwareVersion": "7.2.0",
+            "releaseNotes": "Our long awaited release with tons of improvements",
+            "programmingLanguage": "Java",
+            "requirements": "Java 8 or higher, Minecraft 1.8.9",
+            "memoryRequirements": "2GB RAM minimum",
+            "storageRequirements": "1GB available space",
+            "processorRequirements": "32-bit or 64-bit processor",
+            "softwareHelp": "https://glideclient.com/discord",
+            "installUrl": "https://glideclient.com/download",
+            "datePublished": "2024-11-21",
+            "dateModified": "2025-08-03",
+            "screenshot": [
+                "https://glideclient.com/assets/screenshots/menu.webp",
+                "https://glideclient.com/assets/screenshots/huds.webp",
+                "https://glideclient.com/assets/screenshots/macos.webp"
+            ],
+            "featureList": [
+                "Cross-platform support (Windows, macOS, Linux)",
+                "Quality of life improvements over Soar Client",
+                "Modern HUD themes",
+                "Extensive customization options",
+                "Open-source development",
+                "Discord community support"
+            ],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+            },
+            "creator": {
+                "@type": "Organization",
+                "name": "GlideClient",
+                "url": "https://glideclient.com"
+            }
+            },
+            {
             "@type": "Organization",
             "name": "GlideClient",
-            "url": "https://glideclient.com"
-        },
-        "sameAs": [
-            "https://github.com/GlideClient/",
-            "https://www.youtube.com/@glideclient",
-            "https://glideclient.github.io"
+            "url": "https://glideclient.com",
+            "logo": "https://glideclient.com/assets/logo.svg",
+            "foundingDate": "2024",
+            "description": "Open-source Minecraft client development team",
+            "sameAs": [
+                "https://github.com/GlideClient/",
+                "https://www.youtube.com/@glideclient"
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "url": "https://glideclient.com/discord"
+            }
+            },
+            {
+            "@type": "WebSite",
+            "name": "GlideClient",
+            "url": "https://glideclient.com",
+            "description": "Download GlideClient - Enhanced Minecraft 1.8.9 PvP Client",
+            "inLanguage": "en-GB",
+            "copyrightYear": "2025",
+            "publisher": {
+                "@type": "Organization",
+                "name": "GlideClient"
+            }
+            },
+            {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                "@type": "Question",
+                "name": "Is GlideClient safe to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, GlideClient is completely safe. We're open-source, meaning our code is publicly available for review on GitHub. We don't include any malicious features and focus purely on enhancing your Minecraft PvP experience."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Will I get banned for using GlideClient?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GlideClient only includes cosmetic and quality-of-life improvements that don't provide unfair advantages. However, always check the specific rules of servers you play on, as rules can vary between different Minecraft servers."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "What platforms does GlideClient support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GlideClient supports Windows, macOS, and Linux operating systems. We're committed to maintaining cross-platform compatibility across all major desktop platforms."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "How is GlideClient different from SoarClient?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GlideClient is an enhanced fork of SoarClient that fixes many bugs, improves the design, adds more customization options, and works on more platforms including macOS and Linux."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Is GlideClient free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, GlideClient is completely free and open-source. We develop for the community rather than profit, and our source code is available on GitHub."
+                }
+                }
+            ]
+            }
         ]
     }
-    </script>
+</script>
 </head>
 
 <body>
@@ -206,7 +306,7 @@
                     </div>
                 </div>
                 <div class="grid-item">
-                    <img src="/assets/screenshots/huds.webp" alt="GlideClient Modern HUD" loading="lazy">
+                    <img src="/assets/screenshots/huds.webp" alt="GlideClient Minecraft Modern HUD" loading="lazy">
                     <div class="grid-overlay">
                         <h3>HUD Themes</h3>
                         <p>GlideClient has unqiue modern hud themes.</p>
