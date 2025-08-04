@@ -28,7 +28,9 @@ body {
     overflow-x: hidden;
 }
 
+/* Updated header styles to match help site design */
 .header {
+
     position: fixed;
     width: 100%;
     top: 0;
@@ -185,6 +187,7 @@ body {
         transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
     
+    /* Active state - expand the nav links */
     .nav-links.active {
         max-height: 400px;
         opacity: 1;
@@ -192,17 +195,20 @@ body {
         padding-bottom: 1rem;
     }
 
+    /* Navigation Items Animation */
     .nav-links li {
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.4s ease;
     }
 
+    /* Active State Styles */
     .nav-links.active li {
         opacity: 1;
         transform: translateY(0);
     }
 
+    /* Staggered Animation Delays */
     .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
     .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
     .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
@@ -210,6 +216,7 @@ body {
     .nav-links.active li:nth-child(5) { transition-delay: 0.3s; }
     .nav-links.active li:nth-child(6) { transition-delay: 0.35s; }
 
+    /* Mobile Menu Items */
     .nav-links li {
         width: 100%;
     }
@@ -217,7 +224,7 @@ body {
     .nav-links li a {
         padding: 0.8rem 1rem;
         font-size: 1.1rem;
-        border-radius: 12px;
+        border-radius: 25px;
         width: 100%;
         text-align: center;
         background-color: rgba(255, 255, 255, 0.05);
@@ -524,7 +531,7 @@ body {
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 20px 20px; /* Increased from 10px to 20px */
     padding: 1.5rem;
-    border-radius: 15px;
+    border-radius: 25px;
     width: 300px;
     text-align: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -984,28 +991,10 @@ body {
   animation: rotateGradient 4s linear infinite;
   max-width: 1000px;
   margin: 30px auto;
-  border-radius: 20px;
+  border-radius: 25px;
   margin-bottom: 3rem;
   position: relative;
 }
-
-/**
-Glow breaks safari!
-.gallery::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(var(--gradient-angle, 0deg), rgb(0, 106, 122) 0%, rgb(116, 22, 178) 100%);
-  animation: rotateGradient 4s linear infinite;
-  border-radius: 20px;
-  filter: blur(10px);
-  z-index: -1;
-  transform: translate3d(0px, 0px, 0px) 
-} 
-*/
 
 @property --gradient-angle {
   syntax: '<angle>';
@@ -1156,7 +1145,7 @@ Glow breaks safari!
     background-color: var(--card-bg);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 20px 20px;
-    border-radius: 12px;
+    border-radius: 20px;
     margin-bottom: 1rem;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -1256,7 +1245,6 @@ Glow breaks safari!
     transform: translateY(0);
 }
 
-/* Mobile responsive */
 @media (max-width: 800px) {
     .faq {
         padding: 3rem 1.5rem;
@@ -1279,5 +1267,151 @@ Glow breaks safari!
     
     .faq-icon {
         margin-left: 0.5rem;
+    }
+}
+
+/* Join Us Section */
+.join-us {
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.join-us h2 {
+    background: linear-gradient(90deg, #322bff 0%, #ababe3 50%, #8539ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 750;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 30px rgba(133, 57, 255, 0.5),
+                 0 0 60px rgba(133, 57, 255, 0.3),
+                 0 0 90px rgba(133, 57, 255, 0.1);
+    filter: drop-shadow(0 4px 8px rgba(133, 57, 255, 0.3));
+}
+
+.join-us p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.join-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.join-button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.join-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.join-button:hover::before {
+    left: 100%;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-second-color));
+    color: var(--secondary-color);
+    box-shadow: 0 4px 20px rgba(133, 57, 255, 0.3);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(133, 57, 255, 0.5);
+    animation: none;
+}
+
+.discord-btn {
+    background-color: #5865F2;
+    color: white;
+    border: 2px solid #5865F2;
+    box-shadow: 0 4px 20px rgba(88, 101, 242, 0.2);
+}
+
+.discord-btn:hover {
+    background-color: #4752C4;
+    border-color: #4752C4;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(88, 101, 242, 0.4);
+}
+
+.join-button svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.join-button:hover svg {
+    transform: scale(1.1);
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(133, 57, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(133, 57, 255, 0.8);
+    }
+}
+
+@media (max-width: 800px) {
+    .join-us {
+        margin: 2rem 1rem;
+        padding: 3rem 1.5rem;
+    }
+    
+    .join-us h2 {
+        font-size: 2rem;
+    }
+    
+    .join-us p {
+        font-size: 1.1rem;
+    }
+    
+    .join-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .join-button {
+        width: 100%;
+        min-width: auto;
     }
 }
